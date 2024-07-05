@@ -14,6 +14,7 @@ import dev.grafjojo.gigacraftcore.database.DatabaseRegistry;
 import dev.grafjojo.gigacraftcore.database.postgres.PostgresDatabase;
 import dev.grafjojo.gigaproxycommon.command.*;
 import dev.grafjojo.gigaproxycommon.listener.LoginListener;
+import dev.grafjojo.gigaproxycommon.listener.PingListener;
 import dev.grafjojo.gigaproxycommon.manager.MaintenanceManager;
 import dev.grafjojo.gigaproxycommon.registration.RegistrationManager;
 import dev.grafjojo.gigaproxycommon.registration.RegistrationStorage;
@@ -78,6 +79,7 @@ public class GigaProxy {
 
 
         server.getEventManager().register(this, new LoginListener());
+        server.getEventManager().register(this, new PingListener());
     }
 
     @Subscribe

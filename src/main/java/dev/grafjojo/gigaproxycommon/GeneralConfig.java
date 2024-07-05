@@ -17,7 +17,8 @@ public class GeneralConfig {
 
     public GeneralConfig(ConfigBuilder builder) {
         maintenance = builder.booleanEntry("maintenance", true);
-        maintenanceMessage = builder.stringEntry("maintenanceMessage", "<red>Server ist currently unavailable due to maintenance</red>");
+        maintenanceMessage = builder.stringEntry("maintenanceMessage", "<red>Server is currently unavailable due to maintenance!</red> " +
+                "\n Please checkout the GigaCraft Discord for more information");
 
         postgresHost = builder.stringEntry("postgresHost", "localhost", "Postgres credentials");
         port = builder.integerEntry("port", 5432);
